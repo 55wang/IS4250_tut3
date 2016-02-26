@@ -9,7 +9,7 @@ library(ggplot2)
 library(dplyr)
 ```
 
-a)
+part a
 ```{r, message=FALSE, echo=FALSE}
 test = matrix(c(3,4,7,2), nrow=2, ncol=2)
 colnames(test) <- c("Diabetic Complications-Present","Diabetic Complications-Absent")
@@ -19,11 +19,12 @@ prop.table(test,1)
 ```
 The patients who has good diabetic control only 30% of them have diabetic complication present. Those patients who does not have good diabetic control has 66.7% diabetic complication control present.
 
-b)
+part b
 ```{r, message=FALSE, echo=FALSE}
 fisher.test(test)
 ```
 The p-value is 0.3024 which is greater than 0.05. Therefore the difference between two groups are not statistically different as it can happen by chance.
 
-c)
+part c
+
 The patients are arranged into categories, but it has a very small samples. In addition, it is okay to have some expected counts less than 5, provided none are less than 1, and at least 80% of the expected counts are equal to or greater than 5.
